@@ -116,6 +116,6 @@ async function run() {
 }
 
 run().catch(err => {
-  const message = `${err.message} loose: "${ core.getInput('loose')  }" `
+  const message = `${err.message} ${ JSON.stringify(err) }" `
   core.setFailed(message);
 });
